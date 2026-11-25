@@ -1,94 +1,181 @@
-# FoodHub - Online Food Ordering System
+# FoodHub – Online Food Ordering System
 
-A premium, full-stack Online Food Ordering System built with React, Node.js, Express, and MongoDB. This project features a modern UI, real-time-like interactions, secure JWT authentication, and a complete admin dashboard.
+FoodHub is a full-stack online food ordering platform designed to provide customers with a seamless food discovery, shopping, and ordering experience. Built using React.js, Node.js, Express.js, and MongoDB, the application features a responsive user interface, secure authentication, dynamic cart management, order processing, and an administrative dashboard.
 
-## 🚀 Features
+## 🚀 Key Features
 
 ### Customer Features
-- **Modern Responsive UI**: Beautiful hero sections and interactive food cards.
-- **Restaurant Browsing**: Search and filter restaurants by cuisine and category.
-- **Dynamic Cart**: Persistent cart using LocalStorage with quantity management.
-- **Secure Authentication**: JWT-based login and registration.
-- **Checkout Flow**: Seamless checkout with order placement and success tracking.
-- **Animations**: Smooth transitions powered by Framer Motion.
+- **Responsive User Interface:** Modern and user-friendly design with interactive components and smooth animations.
+- **Restaurant Browsing:** Explore restaurants and discover food items through search and category-based filtering.
+- **Dynamic Shopping Cart:** Add, remove, and update food quantities with persistent cart data using LocalStorage.
+- **Secure Authentication:** User registration and login with JWT-based authentication and password encryption.
+- **Order Management:** Seamless checkout, order placement, and order success tracking.
+- **Interactive Experience:** Smooth page transitions and animations powered by Framer Motion.
 
 ### Admin Features
-- **Dashboard Analytics**: Overview of total sales, orders, and users.
-- **Recent Orders**: Track and manage the latest customer orders.
-- **Menu Management**: (Ready for expansion) Add, edit, or remove menu items.
-- **Role-Based Access**: Restricted access to administrative routes.
+- **Analytics Dashboard:** View key statistics, including total sales, orders, and registered users.
+- **Order Monitoring:** Access and manage recent customer orders.
+- **Menu Management:** Structured interface prepared for adding, updating, and removing food items.
+- **Role-Based Access Control:** Restrict administrative functionality to authorized users.
 
-## 🛠️ Tech Stack
+## 🛠️ Technology Stack
 
-- **Frontend**: React.js, Tailwind CSS, Framer Motion, Lucide React, Axios.
-- **Backend**: Node.js, Express.js.
-- **Database**: MongoDB (Mongoose).
-- **Security**: JWT (JSON Web Tokens), Bcrypt.js, Helmet, CORS.
+| Category | Technologies |
+|---|---|
+| Frontend | React.js, Tailwind CSS |
+| UI & Animations | Framer Motion, Lucide React |
+| API Communication | Axios |
+| Backend | Node.js, Express.js |
+| Database | MongoDB, Mongoose |
+| Authentication | JWT, Bcrypt.js |
+| Security | Helmet, CORS |
 
-## 📦 Installation
+## 📁 Project Structure
 
-### 1. Clone the repository
+```text
+FoodHub/
+├── backend/
+│   ├── models/
+│   ├── routes/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── utils/
+│   └── server.js
+│
+├── frontend/
+│   ├── public/
+│   └── src/
+│       ├── components/
+│       ├── pages/
+│       ├── assets/
+│       └── ...
+│
+└── README.md
+```
+
+*Note: The structure above is illustrative. Actual directories may vary depending on the implementation.*
+
+## ⚙️ Installation and Setup
+
+### Prerequisites
+
+Ensure the following tools are installed:
+
+- Node.js and npm
+- MongoDB
+- Git
+
+### 1. Clone the Repository
+
 ```bash
-# Assuming the project is in your directory
+git clone <https://github.com/snehapatil82/Food_Hub>
 cd BDA_project
 ```
 
 ### 2. Backend Setup
+
 ```bash
 cd backend
 npm install
-# Create a .env file with the following:
-# PORT=5000
-# MONGO_URI=mongodb://localhost:27017/food_ordering_system
-# JWT_SECRET=your_jwt_secret
+```
+
+Create a `.env` file inside the backend directory and configure the following environment variables:
+
+```env
+PORT=5000
+MONGO_URI=mongodb://localhost:27017/food_ordering_system
+JWT_SECRET=your_jwt_secret
 ```
 
 ### 3. Seed the Database
+
+Run the database seeder to populate the database with initial data:
+
 ```bash
 node utils/seeder.js
 ```
 
 ### 4. Frontend Setup
+
+Open a new terminal and execute:
+
 ```bash
-cd ../frontend
+cd frontend
 npm install
 ```
 
-## 🏃‍♂️ Running the Project
+## ▶️ Running the Application
 
-### Start Backend
+Start the backend server:
+
 ```bash
 cd backend
 npm run dev
 ```
 
-### Start Frontend
+Start the frontend development server in a separate terminal:
+
 ```bash
 cd frontend
 npm run dev
 ```
-Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-## 🌐 Deployment Guide
+Open the application in your browser:
 
-### Backend (Render / Railway)
-1. Connect your GitHub repository to Render/Railway.
-2. Set the Environment Variables: `MONGO_URI`, `JWT_SECRET`, `NODE_ENV=production`.
-3. Build Command: `npm install`.
-4. Start Command: `npm start`.
+**http://localhost:5173**
 
-### Frontend (Vercel / Netlify)
-1. Connect your GitHub repository.
-2. Update `api.js` in the frontend to point to your production backend URL.
-3. Build Command: `npm run build`.
-4. Output Directory: `dist`.
+## 🌐 Deployment
 
-## 📜 Deliverables
-- [x] Complete Frontend React Code
-- [x] Complete Backend Express Code
-- [x] MongoDB Schema Models
-- [x] JWT Authentication System
-- [x] Responsive Tailwind UI
-- [x] Database Seeder Script
-- [x] Admin Dashboard Layout
-- [x] Documentation & Deployment Guide
+### Backend Deployment
+
+The backend can be deployed using platforms such as Render or Railway.
+
+1. Connect the GitHub repository to your deployment platform.
+2. Configure the required environment variables:
+   - `MONGO_URI`
+   - `JWT_SECRET`
+   - `NODE_ENV=production`
+3. Set the build command to `npm install`.
+4. Configure the start command as `npm start`.
+5. Deploy the backend and obtain its production URL.
+
+### Frontend Deployment
+
+The frontend can be deployed using Vercel or Netlify.
+
+1. Connect the GitHub repository to the deployment platform.
+2. Configure the frontend API endpoint to use the deployed backend URL.
+3. Set the build command to `npm run build`.
+4. Set the output directory to `dist`.
+5. Deploy the frontend application.
+
+## 📌 Project Highlights
+
+- Full-stack web application with separate frontend and backend architecture.
+- Secure user authentication and role-based authorization.
+- Persistent shopping cart and order placement workflow.
+- Centralized administrative dashboard for monitoring platform activity.
+- Responsive design with modern UI components and animations.
+- MongoDB-based data management.
+
+## 📦 Project Deliverables
+
+- [x] React-based frontend application
+- [x] Express.js backend implementation
+- [x] MongoDB database models
+- [x] JWT authentication and authorization
+- [x] Responsive Tailwind CSS interface
+- [x] Database seeder script
+- [x] Admin dashboard
+- [x] Project documentation and deployment guide
+
+## 👩‍💻 Author
+
+**Sneha Patil**
+
+
+[GitHub](https://github.com/snehapatil82)
+
+---
+
+*FoodHub – Simplifying food discovery and online ordering through technology.*
